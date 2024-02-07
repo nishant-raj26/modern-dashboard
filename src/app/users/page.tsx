@@ -7,18 +7,7 @@ import Image from "next/image";
 
 type Props = {};
 
-const Users = (props: Props) => {
-    return (
-        <div className="flex flex-col gap-5">
-            <PageTitle title="User Data"/>
-            <DataTable columns={columns} data={data}/>
-        </div>
-    );
-};
-
-export default Users;
-
-export const columns: ColumnDef<Payment>[] = [
+const columns: ColumnDef<Payment>[] = [
     {
         accessorKey: "name",
         header: "Name",
@@ -193,3 +182,15 @@ const data: Payment[] = [
             "Stripe",
     },
 ];
+
+
+const Users = (props: Props) => {
+    return (
+        <div className="flex flex-col gap-5">
+            <PageTitle title="User Data"/>
+            <DataTable columns={columns} data={data}/>
+        </div>
+    );
+};
+
+export default Users;
